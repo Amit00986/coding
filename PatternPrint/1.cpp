@@ -10,11 +10,11 @@
 // Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
-void pattern(int n)
-{
-    for (int i = 0; i < 4; i++)
+
+void pattern(int n) {
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 4; j++)
+        for (int j = 0; j < n; j++)
         {
             cout << " * ";
         }
@@ -28,9 +28,8 @@ void pattern(int n)
  * * *
  * * * *
  */
-void pattern2(int n)
-{
-    for (int i = 0; i < 4; i++)
+void pattern2(int n) {
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
         {
@@ -44,13 +43,12 @@ void pattern2(int n)
 1
 1 2
 1 2 3
-1 2 3 4
-1 2 3 4 5
+1 2 3 n
+1 2 3 n 5
 */
 
-void pattern3(int n)
-{
-    for (int i = 1; i < 4; i++)
+void pattern3(int n) {
+    for (int i = 1; i < n; i++)
     {
         for (int j = 1; j <= i; j++)
         {
@@ -64,13 +62,12 @@ void pattern3(int n)
 1
 2 2
 3 3 3
-4 4 4 4
+n n n n
 5 5 5 5 5
 */
 
-void pattern4(int n)
-{
-    for (int i = 1; i < 4; i++)
+void pattern4(int n) {
+    for (int i = 1; i < n; i++)
     {
         for (int j = 1; j <= i; j++)
         {
@@ -97,8 +94,7 @@ void pattern5(int n) {
     }
 }
 
-int main()
-{
+int main() {
     int n;
     cin >> n;
     pattern(n);
